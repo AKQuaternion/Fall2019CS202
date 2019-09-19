@@ -10,9 +10,10 @@ using std::string;
 using std::getline;
 #include <sstream>
 using std::istringstream;
+#include <fstream>
+using std::ofstream;
 
-int main()
-{
+void getInput() {
 	int total = 0;
 	bool keepGoing = true;
 	while (keepGoing) {
@@ -35,13 +36,18 @@ int main()
 			if (x < 0) {
 				keepGoing = false;
 				break;
-				}
+			}
 			total += x;
 		}
-
 	}
 
 	cout << "Your total was " << total << endl;
+}
+
+int main()
+{
+	ofstream ofile("output.txt");
+	ofile << "Hi world.\n";
 	return 0;
 }
 
