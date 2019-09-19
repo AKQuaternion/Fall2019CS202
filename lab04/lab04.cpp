@@ -10,8 +10,12 @@ int main()
 {
 	while (true) {
 		int x;
-		
+		cout << "Enter a number, negative to quit. ";
+		cin >> x;
+		if (x < 0)
+			break;
 	}
 
+	return 0;
 }
 
