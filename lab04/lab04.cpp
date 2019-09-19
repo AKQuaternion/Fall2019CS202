@@ -8,14 +8,17 @@ using std::cin;
 
 int main()
 {
+	int total = 0;
 	while (true) {
 		int x;
 		cout << "Enter a number, negative to quit. ";
 		cin >> x;
 		if (x < 0)
 			break;
+		total += x;
 	}
 
+	cout << "Your total was " << total << endl;
 	return 0;
 }
 
