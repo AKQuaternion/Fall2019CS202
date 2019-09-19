@@ -46,7 +46,7 @@ void getInput() {
 
 int main()
 {
-	ofstream ofile("output.txt");
+	ofstream ofile("output.txt",std::ios::app);
 	ofile << "Hi world.\n";
 	return 0;
 }
