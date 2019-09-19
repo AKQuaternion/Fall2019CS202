@@ -13,6 +13,12 @@ int main()
 		int x;
 		cout << "Enter a number, negative to quit. ";
 		cin >> x;
+		if (!cin) {
+			cout << "That wasn't a number.\n";
+			cin.clear();
+			cin.ignore(999, '\n');
+			continue;
+		}
 		if (x < 0)
 			break;
 		total += x;
