@@ -5,23 +5,40 @@
 using std::cout;
 using std::endl;
 using std::cin;
+#include <string>
+using std::string;
+using std::getline;
+#include <sstream>
+using std::istringstream;
 
 int main()
 {
 	int total = 0;
-	while (true) {
+	bool keepGoing = true;
+	while (keepGoing) {
 		int x;
-		cout << "Enter a number, negative to quit. ";
-		cin >> x;
-		if (!cin) {
-			cout << "That wasn't a number.\n";
-			cin.clear();
-			cin.ignore(999, '\n');
-			continue;
+		cout << "Enter a number or more on one line, negative to quit. ";
+		string userInput;
+		getline(cin, userInput);
+		istringstream uin(userInput);
+		while (true) {
+			uin >> x;
+			if (!uin) {
+				if (uin.eof()) {
+					break;
+				}
+				cout << "Improper input, ignoring rest of line.\n";
+				uin.clear();
+				uin.ignore(999, '\n');
+				continue;
+			}
+			if (x < 0) {
+				keepGoing = false;
+				break;
+				}
+			total += x;
 		}
-		if (x < 0)
-			break;
-		total += x;
+
 	}
 
 	cout << "Your total was " << total << endl;
