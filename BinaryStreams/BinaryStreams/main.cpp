@@ -11,16 +11,16 @@
 #include <iomanip>
 
 int main() {
-//   std::ofstream ofile("output.txt");
+//   std::ofstream ofile("output.dat" , std::ios::binary);
 //
 //   for(int i=0;i<100;++i)
-//      ofile << std::setw(6) << i*i;
+//      ofile.write(reinterpret_cast<const char *>(&i),sizeof(i));
    
    
-   std::ifstream ifile("output.txt");
-   ifile.seekg(6*42);
+   std::ifstream ifile("output.dat", std::ios::binary);
+   ifile.seekg(sizeof(int) * 42);
    int x;
-   ifile >> x;
+   ifile.read(reinterpret_cast<char *>(&x),sizeof(int));
    std::cout << x << "\n";
    return 0;
 }
