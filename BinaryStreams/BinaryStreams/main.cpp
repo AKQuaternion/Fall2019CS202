@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <vector>
 
 int main() {
 //   std::ofstream ofile("output.dat" , std::ios::binary);
@@ -18,9 +19,8 @@ int main() {
    
    
    std::ifstream ifile("output.dat", std::ios::binary);
-   ifile.seekg(sizeof(int) * 42);
-   int x;
-   ifile.read(reinterpret_cast<char *>(&x),sizeof(int));
-   std::cout << x << "\n";
+   std::vector<int> v(100);
+   ifile.read(reinterpret_cast<char *>(&v[0]),sizeof(int)*100);
+   std::cout << v[88] << "\n";
    return 0;
 }
