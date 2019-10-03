@@ -10,6 +10,7 @@ class MyInt {
 public:
   MyInt(int);
   int getVal() const;
+  MyInt & operator+=(const MyInt &rhs);
 private:
   int _val;
 };

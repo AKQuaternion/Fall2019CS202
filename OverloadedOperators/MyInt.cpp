@@ -12,11 +12,18 @@ int MyInt::getVal() const {
   return _val;
 }
 
+MyInt &MyInt::operator+=(const MyInt &rhs) {
+  _val += rhs._val;
+  return *this;
+}
+
 std::ostream &operator<<(std::ostream &os, const MyInt &m) {
   os << m.getVal();
   return os;
 }
 
-MyInt operator+(const MyInt &lhs, const MyInt &rhs) {
-  return MyInt{lhs.getVal()+rhs.getVal()};
+MyInt operator+(const MyInt &lhs, const MyInt &rhs) { //canonical
+  MyInt temp{lhs};
+  temp += rhs;
+  return temp;
 }
