@@ -123,6 +123,33 @@ EnumAndStatic/fast:
 	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/build
 .PHONY : EnumAndStatic/fast
 
+Foo.o: Foo.cpp.o
+
+.PHONY : Foo.o
+
+# target to build an object file
+Foo.cpp.o:
+	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/Foo.cpp.o
+.PHONY : Foo.cpp.o
+
+Foo.i: Foo.cpp.i
+
+.PHONY : Foo.i
+
+# target to preprocess a source file
+Foo.cpp.i:
+	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/Foo.cpp.i
+.PHONY : Foo.cpp.i
+
+Foo.s: Foo.cpp.s
+
+.PHONY : Foo.s
+
+# target to generate assembly for a file
+Foo.cpp.s:
+	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/Foo.cpp.s
+.PHONY : Foo.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... EnumAndStatic"
+	@echo "... Foo.o"
+	@echo "... Foo.i"
+	@echo "... Foo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

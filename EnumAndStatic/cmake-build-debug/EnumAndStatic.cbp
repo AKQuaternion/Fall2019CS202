@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.cpp">
+			<Option target="EnumAndStatic"/>
+		</Unit>
+		<Unit filename="/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.hpp">
+			<Option target="EnumAndStatic"/>
+		</Unit>
 		<Unit filename="/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/main.cpp">
 			<Option target="EnumAndStatic"/>
 		</Unit>

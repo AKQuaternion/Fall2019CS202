@@ -2,6 +2,8 @@
 using std::cout;
 using std::endl;
 
+#include "Foo.hpp"
+
 void foo() {
   int y;
   static int x=0;
@@ -15,8 +17,10 @@ void bar() {
 }
 
 int main() {
-  foo();
-  bar();
-  foo();
-  std::cout << "Hello, World!" << std::endl;
+//  foo();
+//  bar();
+//  foo();
+//  std::cout << "Hello, World!" << std::endl;
+
+cout << Foo::getN() << endl;
 }

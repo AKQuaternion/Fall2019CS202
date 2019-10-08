@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/EnumAndStatic.dir/Foo.cpp.o"
   "CMakeFiles/EnumAndStatic.dir/main.cpp.o"
   "EnumAndStatic"
   "EnumAndStatic.pdb"

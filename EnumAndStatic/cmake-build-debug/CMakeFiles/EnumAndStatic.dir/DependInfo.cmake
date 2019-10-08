@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.cpp" "/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles/EnumAndStatic.dir/Foo.cpp.o"
   "/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/main.cpp" "/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles/EnumAndStatic.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

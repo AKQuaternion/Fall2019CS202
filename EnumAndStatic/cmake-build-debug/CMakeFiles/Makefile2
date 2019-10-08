@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/EnumAndStatic.dir/all:
 	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/depend
 	$(MAKE) -f CMakeFiles/EnumAndStatic.dir/build.make CMakeFiles/EnumAndStatic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target EnumAndStatic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target EnumAndStatic"
 .PHONY : CMakeFiles/EnumAndStatic.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/EnumAndStatic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/EnumAndStatic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/EnumAndStatic.dir/rule
