@@ -5,3 +5,7 @@
 #include "Foo.hpp"
 
 int Foo::n=13;
+
+int Foo::getN() {
+  return n;
+}

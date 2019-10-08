@@ -7,9 +7,7 @@
 
 class Foo {
 public:
-  static int getN() {
-    return n;
-  }
+  static int getN();
 private:
   static int n;
 };
