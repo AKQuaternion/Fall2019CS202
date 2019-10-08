@@ -1,0 +1,3 @@
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/cmake-build-debug/CMakeFiles/EnumAndStatic.dir

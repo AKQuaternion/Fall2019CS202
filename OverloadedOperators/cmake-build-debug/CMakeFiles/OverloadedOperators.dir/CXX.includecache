@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hartman/CLionProjects/Fall2019CS202/OverloadedOperators/MyInt.cpp
+MyInt.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/OverloadedOperators/MyInt.hpp
+
+/Users/hartman/CLionProjects/Fall2019CS202/OverloadedOperators/MyInt.hpp
+iostream
+-
+
+/Users/hartman/CLionProjects/Fall2019CS202/OverloadedOperators/main.cpp
+iostream
+-
+MyInt.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/OverloadedOperators/MyInt.hpp
+
