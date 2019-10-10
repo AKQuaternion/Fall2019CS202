@@ -30,8 +30,18 @@ std::ostream &operator<<(std::ostream &os, const Rational &r) {
     os << "/" << r.getDenominator();
   return os;
 }
+
 Rational operator+(const Rational &lhs, const Rational &rhs) {
-  return Rational{lhs.getNumerator() * rhs.getDenominator() +
-                      lhs.getDenominator() * rhs.getNumerator(),
-                  lhs.getDenominator() * rhs.getDenominator()};
+  int firstPart = lhs.getNumerator() * rhs.getDenominator();
+
+  if (lhs.isNegative())
+    firstPart *= -1;
+
+  int secondPart = lhs.getDenominator() * rhs.getNumerator();
+  if (rhs.isNegative())
+    secondPart *= -1;
+
+  return Rational{
+      firstPart + secondPart,
+      static_cast<int>(lhs.getDenominator() * rhs.getDenominator())};
 }
