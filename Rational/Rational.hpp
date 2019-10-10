@@ -14,6 +14,7 @@ public:
   unsigned int getDenominator() const;
   bool isNegative() const;
   Rational &operator+=(const Rational &rhs);
+  Rational &operator*=(const Rational &rhs);
 
 private:
   unsigned int _num;
@@ -22,6 +23,7 @@ private:
 };
 
 Rational operator+(const Rational &lhs, const Rational &rhs);
+Rational operator*(Rational lhs, const Rational &rhs);
 
 std::ostream &operator<<(std::ostream &os, const Rational &r);
 #endif // RATIONAL_RATIONAL_HPP

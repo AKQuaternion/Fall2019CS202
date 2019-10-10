@@ -29,6 +29,13 @@ Rational &Rational::operator+=(const Rational &rhs) {
   return *this = *this + rhs;
 }
 
+Rational &Rational::operator*=(const Rational &rhs) {
+  _num *= rhs._num;
+  _den *= rhs._den;
+  _neg ^= rhs._neg;
+  return *this;
+}
+
 std::ostream &operator<<(std::ostream &os, const Rational &r) {
   if (r.isNegative())
     os << "-";
@@ -53,3 +60,6 @@ Rational operator+(const Rational &lhs, const Rational &rhs) {
       firstPart + secondPart,
       static_cast<int>(lhs.getDenominator() * rhs.getDenominator())};
 }
+
+// Canonical
+Rational operator*(Rational lhs, const Rational &rhs) { return lhs *= rhs; }
