@@ -13,6 +13,7 @@ public:
   unsigned int getNumerator() const;
   unsigned int getDenominator() const;
   bool isNegative() const;
+  Rational &operator+=(const Rational &rhs);
 
 private:
   unsigned int _num;

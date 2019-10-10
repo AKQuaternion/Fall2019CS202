@@ -8,8 +8,10 @@ Rational::Rational(int num, int den) {
   if (num < 0) {
     _num = -num;
     _neg = true;
-  } else
+  } else {
     _num = num;
+    _neg = false;
+  }
   if (den < 0) {
     _den = -den;
     _neg = !_neg;
@@ -21,6 +23,11 @@ unsigned int Rational::getNumerator() const { return _num; }
 unsigned int Rational::getDenominator() const { return _den; }
 
 bool Rational::isNegative() const { return _neg; }
+
+// Canonical
+Rational &Rational::operator+=(const Rational &rhs) {
+  return *this = *this + rhs;
+}
 
 std::ostream &operator<<(std::ostream &os, const Rational &r) {
   if (r.isNegative())
@@ -38,6 +45,7 @@ Rational operator+(const Rational &lhs, const Rational &rhs) {
     firstPart *= -1;
 
   int secondPart = lhs.getDenominator() * rhs.getNumerator();
+
   if (rhs.isNegative())
     secondPart *= -1;
 
