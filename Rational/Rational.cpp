@@ -17,6 +17,7 @@ Rational::Rational(int num, int den) {
     _neg = !_neg;
   } else
     _den = den;
+  reduce();
 }
 
 unsigned int Rational::getNumerator() const { return _num; }
@@ -33,7 +34,36 @@ Rational &Rational::operator*=(const Rational &rhs) {
   _num *= rhs._num;
   _den *= rhs._den;
   _neg ^= rhs._neg;
+  reduce();
   return *this;
+}
+
+Rational &Rational::operator/=(const Rational &rhs) {
+  _num *= rhs._den;
+  _den *= rhs._num;
+  _neg ^= rhs._neg;
+  reduce();
+  return *this;
+}
+
+void Rational::reduce() {
+  auto g = gcd(_num, _den);
+  _num /= g;
+  _den /= g;
+}
+
+int Rational::gcd(int x, int y) const {
+  while (y != 0) {
+    auto r = x % y;
+    x = y;
+    y = r;
+  }
+  return x;
+}
+
+// Canonical
+Rational &Rational::operator-=(const Rational &rhs) {
+  return *this = *this - rhs;
 }
 
 std::ostream &operator<<(std::ostream &os, const Rational &r) {
@@ -63,3 +93,42 @@ Rational operator+(const Rational &lhs, const Rational &rhs) {
 
 // Canonical
 Rational operator*(Rational lhs, const Rational &rhs) { return lhs *= rhs; }
+
+// Canonical
+Rational operator/(Rational lhs, const Rational &rhs) { return lhs /= rhs; }
+
+Rational operator-(const Rational &lhs, const Rational &rhs) {
+  auto negRhs{rhs};
+  negRhs._neg = !negRhs._neg;
+  return lhs + negRhs;
+}
+
+bool operator<(const Rational &lhs, const Rational &rhs) {
+  auto firstPart = lhs._num * rhs._den;
+  if (lhs._neg)
+    firstPart *= -1;
+  auto secondPart = rhs._num * lhs._den;
+  if (rhs._neg)
+    secondPart *= -1;
+  return (firstPart < secondPart);
+}
+
+// Canonical
+bool operator>(const Rational &lhs, const Rational &rhs) { return rhs < lhs; }
+
+bool operator<=(const Rational &lhs, const Rational &rhs) {
+  return !(rhs < lhs);
+}
+
+bool operator>=(const Rational &lhs, const Rational &rhs) {
+  return !(lhs < rhs);
+}
+
+bool operator==(const Rational &lhs, const Rational &rhs) {
+  return lhs._num == rhs._num && lhs._den == rhs._den && lhs._neg == rhs._neg;
+}
+
+// Canonical
+bool operator!=(const Rational &lhs, const Rational &rhs) {
+  return !(lhs == rhs);
+}
