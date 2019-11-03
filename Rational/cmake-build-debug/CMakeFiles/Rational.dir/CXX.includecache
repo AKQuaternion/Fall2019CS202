@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hartman/CLionProjects/Fall2019CS202/Rational/Rational.hpp
+iostream
+-
+
+/Users/hartman/CLionProjects/Fall2019CS202/Rational/main.cpp
+iostream
+-
+Rational.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/Rational/Rational.hpp
+

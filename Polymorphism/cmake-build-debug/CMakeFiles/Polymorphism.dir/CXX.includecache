@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hartman/CLionProjects/Fall2019CS202/Polymorphism/Shape.cpp
+Shape.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/Polymorphism/Shape.hpp
+iostream
+-
+random
+-
+
+/Users/hartman/CLionProjects/Fall2019CS202/Polymorphism/Shape.hpp
+memory
+-
+
+/Users/hartman/CLionProjects/Fall2019CS202/Polymorphism/main.cpp
+iostream
+-
+Shape.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/Polymorphism/Shape.hpp
+

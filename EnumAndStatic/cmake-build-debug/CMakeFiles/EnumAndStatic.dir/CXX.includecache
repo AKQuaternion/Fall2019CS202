@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.cpp
+Foo.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.hpp
+
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.hpp
+
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/main.cpp
+iostream
+-
+Foo.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/EnumAndStatic/Foo.hpp
+
