@@ -3,13 +3,16 @@ using std::cout;
 
 class Base {
 public:
-virtual void fooVirtual() {
-  cout << "Base class virtual foo\n";
-}
- void fooNotVirtual() {
-  cout << "Base class non-virtual foo\n";
-}
+  virtual void fooVirtual() const { cout << "Base class virtual foo\n"; }
+  void fooNotVirtual() const { cout << "Base class non-virtual foo\n"; }
 };
+
+class Derived : public Base {
+public:
+  void fooVirtual() override const { cout << "Base class virtual foo\n"; }
+  void fooNotVirtual() const { cout << "Base class non-virtual foo\n"; }
+};
+
 int main() {
 Base b;
 // declare a Derived class object here.
