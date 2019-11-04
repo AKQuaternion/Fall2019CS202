@@ -14,22 +14,22 @@ public:
 };
 
 int main() {
-Base b;
-// declare a Derived class object here.
+  Base b;
+  // declare a Derived class object here.
 
-//  A base class pointer to the base class object.
-Base *bPb = &b;
+  //  A base class pointer to the base class object.
+  Base *bPb = &b;
 
-//  A base class pointer to the derived class object.
-//  A derived class pointer to the derived class object.
-//  A base class reference to the base class object.
-//  A base class reference to the derived class object.
-//  A derived class reference to the derived class object.
+  //  A base class pointer to the derived class object.
+  //  A derived class pointer to the derived class object.
+  //  A base class reference to the base class object.
+  //  A base class reference to the derived class object.
+  //  A derived class reference to the derived class object.
 
-cout << "Calling non-virtual function from Base class pointer to base: ";
-bPb->fooNotVirtual();
+  cout << "Calling non-virtual function from Base class pointer to base: ";
+  bPb->fooNotVirtual();
 
-cout << "Calling virtual function from Base class pointer to base: ";
+  cout << "Calling virtual function from Base class pointer to base: ";
   bPb->fooVirtual();
   return 0;
 }
