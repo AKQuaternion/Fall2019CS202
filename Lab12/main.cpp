@@ -3,33 +3,38 @@ using std::cout;
 
 class Base {
 public:
-  virtual void fooVirtual() const { cout << "Base class virtual foo\n"; }
-  void fooNotVirtual() const { cout << "Base class non-virtual foo\n"; }
+  virtual void fooVirtual() const { cout << "Base class virtual function\n"; }
+  void fooNotVirtual() const { cout << "Base class non-virtual function\n"; }
 };
 
 class Derived : public Base {
 public:
-  void fooVirtual() override const { cout << "Base class virtual foo\n"; }
-  void fooNotVirtual() const { cout << "Base class non-virtual foo\n"; }
+  void fooVirtual() const override { cout << "Base class virtual function\n"; }
+  void fooNotVirtual() const { cout << "Base class non-virtual function\n"; }
 };
 
 int main() {
   Base b;
-  // declare a Derived class object here.
+  Derived d;
 
-  //  A base class pointer to the base class object.
+  //  1) A base class pointer to the base class object.
   Base *bPb = &b;
 
-  //  A base class pointer to the derived class object.
-  //  A derived class pointer to the derived class object.
-  //  A base class reference to the base class object.
-  //  A base class reference to the derived class object.
-  //  A derived class reference to the derived class object.
+  //  2) A base class pointer to the derived class object.
+  Base *bPd = &d;
+
+  //  3) A derived class pointer to the derived class object.
+  //  4) A base class reference to the base class object.
+  //  5) A base class reference to the derived class object.
+  //  6) A derived class reference to the derived class object.
 
   cout << "Calling non-virtual function from Base class pointer to base: ";
   bPb->fooNotVirtual();
 
   cout << "Calling virtual function from Base class pointer to base: ";
   bPb->fooVirtual();
+
+  //Call both functions from pointers 2-6
+
   return 0;
 }
