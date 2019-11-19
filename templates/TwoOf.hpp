@@ -17,4 +17,10 @@ private:
 template <typename T>
 TwoOf<T>::TwoOf(const T &first, const T &second) :_first(first), _second(second){
 }
+
+template <typename T>
+TwoOf<T> makeTwoOf(const T & first, const T & second) {
+  return TwoOf<T>(first,second);
+}
+
 #endif // TEMPLATES_TWOOF_HPP
