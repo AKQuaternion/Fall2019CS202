@@ -9,8 +9,8 @@ public:
 
 class Derived : public Base {
 public:
-  void fooVirtual() const override { cout << "Base class virtual function\n"; }
-  void fooNotVirtual() const { cout << "Base class non-virtual function\n"; }
+  void fooVirtual() const override { cout << "Derived class virtual function\n"; }
+  void fooNotVirtual() const { cout << "Derived class non-virtual function\n"; }
 };
 
 int main() {

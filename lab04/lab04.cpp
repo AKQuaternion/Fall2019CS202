@@ -12,6 +12,7 @@ using std::getline;
 using std::istringstream;
 #include <fstream>
 using std::ofstream;
+#include <vector>
 
 int getInput() {
   int total = 0;
@@ -39,12 +40,36 @@ int getInput() {
   }
 }
 
+void doRow(int i,int j) {
+  for(int k=0;k<3;++k)
+    cout << "doing piece " << i << " " << j << " " << k << endl;
+}
+
+void doSlice(int i) {
+  for(int j=0;j<3;++j)
+    doRow(i,j);
+}
+
+void doCube() {
+  for(int i=0;i<3;++i)
+    doSlice(i);
+}
+
+using std::vector;
+
+template <typename T>
+void printVec(vector<T> v) {
+  for (const auto &t:v)
+    cout << t << " ";
+  cout << endl;
+}
+
 int main()
 {
-//  ofstream ofile("output.txt",std::ios::app);
-//  ofile << "Hi world.\n";
-  int total = getInput();
-  cout << "Your total was " << total << endl;
+  vector<double> d{1.1,2.2,3,3};;
+  vector<int> i{13,14,15};
+  printVec(d);
+  printVec(i);
   return 0;
 }
 
