@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hartman/CLionProjects/Fall2019CS202/templates/TwoOf.hpp
+iostream
+-
+
+/Users/hartman/CLionProjects/Fall2019CS202/templates/main.cpp
+iostream
+-
+TwoOf.hpp
+/Users/hartman/CLionProjects/Fall2019CS202/templates/TwoOf.hpp
+
